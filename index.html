@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Tetris Game JS</title>
+    <style>
+		body {
+			background-color: #101010;
+            color: white;
+		}
+        .score{
+            font-size: 30px;
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            grid-template-columns: 200px 200px;
+            opacity: 1;
+            margin: 20px;
+        }
+        #blue {
+            color: blue;
+            opacity: 1;
+            font-weight: 0.9;
+            font-size: 26px;
+        }
+        #red {
+            color: red;
+        }
+        #green {
+            color: green; 
+        }
+        #yellow {
+            color: yellow;
+            opacity: 0.65;
+        }
+        div{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+        }
+        canvas{
+            display: block;
+            margin: auto;
+            opacity: 0.3;
+            strokeStyle: '#ff0000';
+            border: 8px solid gray;
+            border-radius: 5px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        p {
+            color: white;
+            opacity: 0.9;
+        }
+        #greeting {
+            margin-top: 50px;
+            font-size: 36px;
+            opacity: 0.9;
+        }
+        .score_button {
+            background-color: #101010;
+            width: 200px;
+            margin: 10px 10px 10px 10px;
+            //margin-left: ;
+        }
+    </style>
+	<link type="text/css" href="BlokiStyle.css">
+
+<!--
+  <script type="text/javascript">
+	var number = 123;
+  </script>
+-->
+
+</head>
+<body>
+   <div id="greeting">This Game Is BLOKI!!!<a target="_blank" href="https://www.youtube.com/c/codeexplained"></a></div><br>
+    <canvas id="Blokus"></canvas>
+    <div class="score">
+        <button type="button" class="score_button">
+            <div id="blue">
+                Blue Score: 
+                <div id="score_blue">
+        		document.write(score_b)
+        		</div>
+            </div>
+        </button>
+        <button type="button" class="score_button">
+            <div id="red">
+                Red Score: 
+                <div id="score_red">
+                document.write(score_r)
+                </div>
+            </div>
+        </button>
+        <button type="button" class="score_button">
+            <div id="green">
+                Green Score: 
+                <div id="score_green">
+                document.write(score_g)
+                </div>
+            </div>
+        </button>
+        <button type="button" class="score_button">
+            <div id="yellow">
+                Yellow Score: 
+                <div id="score_yellow">
+                document.write(score_y)
+                </div>
+            </div>
+        </button>
+    </div>
+
+	<div>
+		<p> Pieces: I, J, L, O, S, F, Z, H, C, Y, B, X, M, G, W, V, T, P, U, K, D, A, R, E, Q </p>
+	</div>
+    <script src="tetrominoes.js"></script>
+    <script src="Tetris10.js"></script>
+
+</body>
+</html>
