@@ -20,11 +20,6 @@ let score_g = 107;
 let score_r = 107;
 let score_y = 107;
 
-let playerBlue = true;
-let playerRed = true;
-let playerGreen = true;
-let playerYellow = true;
-
 //var piecePlaced = false;
 
 // draw a square
@@ -59,7 +54,7 @@ drawBoard();
 // the pieces and their colors
 // I, J, L, O, S, F, Z, H, C, Y, B, X, M, G, W, V, T, P, U, S, D, A, R, E, Q
 // i.73, j.74, l.76, o.79, s.83, f.70, z.90, h.72, c.67, y.89, b.66, x.88, m.77, g.71, w.87, v.86, t.84, p.80, u.85, k.75, d.68, a.65, r.82, e.69, q.81
-
+ 
 let PIECES = [
 	[I,"blue","red","green","yellow","unused","unused","unused","unused",73,4],
 	[J,"blue","red","green","yellow","unused","unused","unused","unused",74,4],
@@ -88,8 +83,6 @@ let PIECES = [
 	[Q,"blue","red","green","yellow","unused","unused","unused","unused",81,5]
 ];
 
-let PIECESPoints = [4,4,4,4,4,4,4,5,5,6,5,5,3,4,5,5,5,5,5,2,1,3,5,5,5];
-
 // generate random pieces
 
 // The Object Piece
@@ -103,79 +96,33 @@ function CHOOSEPLACE(event) {
 	yo = Math.floor(yo / 22.5);
 }
 
+
 function get_Piece() {
-	/*
 	console.log("X place");
 	console.log(xo);
 	console.log("Y place");
 	console.log(yo);
-	*/
-
-	i = checkOutPlayers(i)	
-
 	
-	console.log("i is: " + i);
-	console.log("r is: " + r);
-	if (PIECES[r][i+4] == "unused") {
-		PIECES[r][i+4] = "used";
-		console.log("howdy");
-		do_score()
-		p = new Piece( PIECES[r][0], PIECES[r][i], xo, yo)	
-		i++;
-		return p;
-	}
+	do_score()
 
-
-
-
-
-	console.log("here");
-	return null;
-}
-
-function checkOutPlayers(i) {
-	console.log(playerBlue);
-	console.log(playerRed);
-	console.log(playerGreen);
-	console.log(playerYellow);
-	console.log(i);
-	if ((i === 1) && (!playerBlue)) {
-		i = 2;
-		return checkOutPlayers(i);
-	} else if ((i === 1) && (playerBlue)) {
-		return i;
-	} else if ((i === 2) && (!playerRed)) {
-		i = 3;
-		return checkOutPlayers(i);
-	} else if ((i === 2) && (playerRed)) {
-		return i;
-	} else if ((i === 3) && (!playerGreen)) {
-		i = 4;
-		return checkOutPlayers(i);	
-	} else if ((i === 3) && (playerGreen)) {
-		return i;	
-	} else if ((i === 4) && (!playerYellow)) {
-		i = 1;
-		return checkOutPlayers(i);
-	} else if ((i === 4) && (playerYellow)) {
-		return i;
-	} else {
-		alert("uh oh");
-		return i;
-	}
+	p = new Piece( PIECES[r][0], PIECES[r][i], xo, yo)
+	console.log("HELLO!");
+	
+	i++;
+	return p;
 }
 
 function do_score() {
 	console.log("This is i for color")
 	console.log(i)
 	if (i == 1)
-		score_b = score_b - PIECESPoints[r]
+		score_b = score_b - PIECES[r][10]
 	else if (i == 2)
-		score_r = score_r - PIECESPoints[r]
+		score_r = score_r - PIECES[r][10]
 	else if (i == 3)
-		score_g = score_g - PIECESPoints[r]
+		score_g = score_g - PIECES[r][10]
 	else if (i == 4)
-		score_y = score_y - PIECESPoints[r]
+		score_y = score_y - PIECES[r][10]
 	document.getElementById('score_blue').innerHTML = score_b;
 	document.getElementById('score_red').innerHTML = score_r;
 	document.getElementById('score_green').innerHTML = score_g;
@@ -200,6 +147,7 @@ function Piece(tetromino, color, xo, yo){
 	this.x = xo;
 	this.y = yo;
 	this.fill(this.color);
+
 }
 
 // fill function
@@ -223,6 +171,7 @@ Piece.prototype.draw = function(){
 
 // undraw a piece
 
+
 Piece.prototype.unDraw = function(){
 	this.fill(VACANT);
 }
@@ -238,6 +187,7 @@ Piece.prototype.moveUp = function(){
 }
 
 // move the piece Down
+
 Piece.prototype.moveDown = function(){
 	if(!this.collision(0,1,this.activeTetromino)){
 	this.unDraw();
@@ -303,6 +253,7 @@ Piece.prototype.lock = function(){
 }
 
 // collision function
+
 Piece.prototype.collision = function(x, y, piece){
 	for( r = 0; r < piece.length; r++){
 		for(c = 0; c < piece.length; c++){
@@ -361,14 +312,15 @@ function CONTROL(event){
 	}
 	for(let k = 0; k < PIECES.length; k++) {
 		if (event.keyCode == PIECES[k][9]) {
-			console.log("i is: " + i);
 			if (i === 5){
 				i = 1;	
-			} 	
-			r = k;
-			get_Piece()
-			return
-			
+			}			
+			if (PIECES[k][i+4] == "unused") {
+				PIECES[k][i+4] = "used";
+				r = k;
+				get_Piece()
+				return
+			}
 		alert('not valid piece or used already');	
 		}
 	}
@@ -378,72 +330,3 @@ document.getElementById('score_blue').innerHTML = score_b;
 document.getElementById('score_red').innerHTML = score_r;
 document.getElementById('score_green').innerHTML = score_g;
 document.getElementById('score_yellow').innerHTML = score_y;
-
-
-let blueButton = document.querySelector("#blue");
-blueButton.addEventListener("click",blueplayerLife);
-
-let redButton = document.querySelector("#red");
-redButton.addEventListener("click",redplayerLife);
-
-let greenButton = document.querySelector("#green");
-greenButton.addEventListener("click",greenplayerLife);
-
-let yellowButton = document.querySelector("#yellow");
-yellowButton.addEventListener("click",yellowplayerLife);
-
-
-function blueplayerLife() {
-	if(playerBlue) {
-		playerBlue = false;
-		document.getElementById("blue").style.color = "grey";
-		document.getElementById("blue").style.opacity = "0.8";
-		console.log(playerBlue);
-		return playerBlue;
-	} else {
-		document.getElementById("blue").style.color = "blue";
-		document.getElementById("blue").style.opacity = "0.9";
-		playerBlue = true;
-		return playerBlue;
-	}
-}
-
-function redplayerLife() {
-	if(playerRed) {
-		playerRed = false;
-		document.getElementById("red").style.color = "grey";
-		document.getElementById("red").style.opacity = "0.8";
-		return playerRed;
-	} else {
-		document.getElementById("red").style.color = "red";
-		playerRed = true;
-		return playerRed;
-	}
-}
-
-function greenplayerLife() {
-	if(playerGreen) {
-		playerGreen = false;
-		document.getElementById("green").style.color = "grey";
-		document.getElementById("green").style.opacity = "0.8";
-		return playerGreen;
-	} else {
-		playerBlue = true;
-		document.getElementById("green").style.color = "green";
-		return playerGreen;
-	}
-}
-
-function yellowplayerLife() {
-	if(playerYellow) {
-		playerYellow = false;
-		document.getElementById("yellow").style.color = "grey";
-		document.getElementById("yellow").style.opacity = "0.8";
-		return playerYellow;
-	} else {
-		document.getElementById("yellow").style.color = "yellow";
-		document.getElementById("yellow").style.opacity = "0.7";
-		playerYellow = true;
-		return playerYellow;
-	}
-}

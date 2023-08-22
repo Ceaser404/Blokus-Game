@@ -4,69 +4,15 @@
 <head>
 
     <title>Tetris Game JS</title>
-    <style>
-		body {
-			background-color: #101010;
-            color: white;
-		}
-        .score{
-            font-size: 30px;
-            display: grid;
-            justify-items: center;
-            justify-content: center;
-            grid-template-columns: 200px 200px;
-            opacity: 1;
-            margin: 20px;
-        }
-        #blue {
-            color: blue;
-            opacity: 1;
-            font-weight: 0.9;
-            font-size: 26px;
-        }
-        #red {
-            color: red;
-        }
-        #green {
-            color: green; 
-        }
-        #yellow {
-            color: yellow;
-            opacity: 0.65;
-        }
-        div{
-            font-size: 25px;
-            font-weight: bold;
-            font-family: monospace;
-            text-align: center;
-        }
-        canvas{
-            display: block;
-            margin: auto;
-            opacity: 0.3;
-            strokeStyle: '#ff0000';
-            border: 8px solid gray;
-            border-radius: 5px;
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
-        p {
-            color: white;
-            opacity: 0.9;
-        }
-        #greeting {
-            margin-top: 50px;
-            font-size: 36px;
-            opacity: 0.9;
-        }
-        .score_button {
-            background-color: #101010;
-            width: 200px;
-            margin: 10px 10px 10px 10px;
-            //margin-left: ;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 	<link type="text/css" href="BlokiStyle.css">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
 
 <!--
   <script type="text/javascript">
@@ -77,7 +23,8 @@
 </head>
 <body>
    <div id="greeting">This Game Is BLOKI!!!<a target="_blank" href="https://www.youtube.com/c/codeexplained"></a></div><br>
-    <canvas id="Blokus"></canvas>
+
+    <canvas class="BlokusCanvas" id="Blokus"></canvas>
     <div class="score">
         <button type="button" class="score_button">
             <div id="blue">
@@ -112,12 +59,76 @@
             </div>
         </button>
     </div>
-
+    <!--
 	<div>
 		<p> Pieces: I, J, L, O, S, F, Z, H, C, Y, B, X, M, G, W, V, T, P, U, K, D, A, R, E, Q </p>
 	</div>
+    -->
+
+    <section class="product"> 
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to list</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card2.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wish</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card2.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card2.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card2.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/card1.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="tetrominoes.js"></script>
     <script src="Tetris10.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
