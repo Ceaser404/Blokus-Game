@@ -3,10 +3,9 @@
 <html>
 <head>
 
-    <title>Tetris Game JS</title>
+    <title>Blokus Game</title>
     <link rel="stylesheet" href="style.css">
 	<link type="text/css" href="BlokiStyle.css">
-
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,17 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
 
-<!--
-  <script type="text/javascript">
-	var number = 123;
-  </script>
--->
-
 </head>
 <body>
-   <div id="greeting">This Game Is BLOKI!!!<a target="_blank" href="https://www.youtube.com/c/codeexplained"></a></div><br>
-
     <canvas class="BlokusCanvas" id="Blokus"></canvas>
+    <div id="greeting">This Game Is BLOKI!!!</div>    
     <div class="score">
         <button type="button" class="score_button">
             <div id="blue">
@@ -64,71 +56,634 @@
 		<p> Pieces: I, J, L, O, S, F, Z, H, C, Y, B, X, M, G, W, V, T, P, U, K, D, A, R, E, Q </p>
 	</div>
     -->
-
-    <section class="product"> 
-        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
-        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+    
+    <section class="product_blue"> 
         <div class="product-container">
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card1.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to list</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_Q_blue.jpg" class="product-thumb" alt="">
+                    <button id="Q" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card2.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wish</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_W_blue.jpg" class="product-thumb" alt="">
+                    <button id="W" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card1.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_E_blue.jpg" class="product-thumb" alt="">
+                    <button id="E" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card2.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_R_blue.jpg" class="product-thumb" alt="">
+                    <button id="R" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card1.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_T_blue.jpg" class="product-thumb" alt="">
+                    <button id="T" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card2.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_Y_blue.jpg" class="product-thumb" alt="">
+                    <button id="Y" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card1.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_U_blue.jpg" class="product-thumb" alt="">
+                    <button id="U" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card2.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_I_blue.jpg" class="product-thumb" alt="">
+                    <button id="I" class="card-btn">Choose Piece</button>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/card1.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                    <img src="images/Tetronimo_blue/Tetronimo_O_blue.jpg" class="product-thumb" alt="">
+                    <button id="O" class="card-btn">Choose Piece</button>
                 </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_P_blue.jpg" class="product-thumb" alt="">
+                    <button id="P" class="card-btn">Choose Piece</button>
                 </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_A_blue.jpg" class="product-thumb" alt="">
+                    <button id="A" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_S_blue.jpg" class="product-thumb" alt="">
+                    <button id="S" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container-2">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_D_blue.jpg" class="product-thumb" alt="">
+                    <button id="D" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_F_blue.jpg" class="product-thumb" alt="">
+                    <button id="F" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_G_blue.jpg" class="product-thumb" alt="">
+                    <button id="G" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_H_blue.jpg" class="product-thumb" alt="">
+                    <button id="H" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_J_blue.jpg" class="product-thumb" alt="">
+                    <button id="J" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_K_blue.jpg" class="product-thumb" alt="">
+                    <button id="K" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_Z_blue.jpg" class="product-thumb" alt="">
+                    <button id="Z" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_X_blue.jpg" class="product-thumb" alt="">
+                    <button id="X" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_C_blue.jpg" class="product-thumb" alt="">
+                    <button id="C" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_V_blue.jpg" class="product-thumb" alt="">
+                    <button id="V" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_B_blue.jpg" class="product-thumb" alt="">
+                    <button id="B" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_blue/Tetronimo_M_blue.jpg" class="product-thumb" alt="">
+                    <button id="M" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
             </div>
         </div>
     </section>
 
+
+
+
+
+    <section class="product_red"> 
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_Q_red.jpg" class="product-thumb" alt="">
+                    <button id="Q" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_W_red.jpg" class="product-thumb" alt="">
+                    <button id="W" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_E_red.jpg" class="product-thumb" alt="">
+                    <button id="E" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_R_red.jpg" class="product-thumb" alt="">
+                    <button id="R" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_T_red.jpg" class="product-thumb" alt="">
+                    <button id="T" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_Y_red.jpg" class="product-thumb" alt="">
+                    <button id="Y" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_U_red.jpg" class="product-thumb" alt="">
+                    <button id="U" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_I_red.jpg" class="product-thumb" alt="">
+                    <button id="I" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_O_red.jpg" class="product-thumb" alt="">
+                    <button id="O" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_P_red.jpg" class="product-thumb" alt="">
+                    <button id="P" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_A_red.jpg" class="product-thumb" alt="">
+                    <button id="A" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_S_red.jpg" class="product-thumb" alt="">
+                    <button id="S" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container-2">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_D_red.jpg" class="product-thumb" alt="">
+                    <button id="D" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_F_red.jpg" class="product-thumb" alt="">
+                    <button id="F" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_G_red.jpg" class="product-thumb" alt="">
+                    <button id="G" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_H_red.jpg" class="product-thumb" alt="">
+                    <button id="H" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_J_red.jpg" class="product-thumb" alt="">
+                    <button id="J" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_K_red.jpg" class="product-thumb" alt="">
+                    <button id="K" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_Z_red.jpg" class="product-thumb" alt="">
+                    <button id="Z" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_X_red.jpg" class="product-thumb" alt="">
+                    <button id="X" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_C_red.jpg" class="product-thumb" alt="">
+                    <button id="C" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_V_red.jpg" class="product-thumb" alt="">
+                    <button id="V" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_B_red.jpg" class="product-thumb" alt="">
+                    <button id="B" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_red/Tetronimo_M_red.jpg" class="product-thumb" alt="">
+                    <button id="M" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="product_green"> 
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_Q_green.jpg" class="product-thumb" alt="">
+                    <button id="Q" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_W_green.jpg" class="product-thumb" alt="">
+                    <button id="W" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_E_green.jpg" class="product-thumb" alt="">
+                    <button id="E" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_R_green.jpg" class="product-thumb" alt="">
+                    <button id="R" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_T_green.jpg" class="product-thumb" alt="">
+                    <button id="T" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_Y_green.jpg" class="product-thumb" alt="">
+                    <button id="Y" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_U_green.jpg" class="product-thumb" alt="">
+                    <button id="U" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_I_green.jpg" class="product-thumb" alt="">
+                    <button id="I" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_O_green.jpg" class="product-thumb" alt="">
+                    <button id="O" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_P_green.jpg" class="product-thumb" alt="">
+                    <button id="P" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_A_green.jpg" class="product-thumb" alt="">
+                    <button id="A" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_S_green.jpg" class="product-thumb" alt="">
+                    <button id="S" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container-2">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_D_green.jpg" class="product-thumb" alt="">
+                    <button id="D" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_F_green.jpg" class="product-thumb" alt="">
+                    <button id="F" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_G_green.jpg" class="product-thumb" alt="">
+                    <button id="G" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_H_green.jpg" class="product-thumb" alt="">
+                    <button id="H" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_J_green.jpg" class="product-thumb" alt="">
+                    <button id="J" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_K_green.jpg" class="product-thumb" alt="">
+                    <button id="K" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_Z_green.jpg" class="product-thumb" alt="">
+                    <button id="Z" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_X_green.jpg" class="product-thumb" alt="">
+                    <button id="X" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_C_green.jpg" class="product-thumb" alt="">
+                    <button id="C" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_V_green.jpg" class="product-thumb" alt="">
+                    <button id="V" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_B_green.jpg" class="product-thumb" alt="">
+                    <button id="B" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_green/Tetronimo_M_green.jpg" class="product-thumb" alt="">
+                    <button id="M" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="product_yellow"> 
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_Q_yellow.jpg" class="product-thumb" alt="">
+                    <button id="Q" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_W_yellow.jpg" class="product-thumb" alt="">
+                    <button id="W" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_E_yellow.jpg" class="product-thumb" alt="">
+                    <button id="E" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_R_yellow.jpg" class="product-thumb" alt="">
+                    <button id="R" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_T_yellow.jpg" class="product-thumb" alt="">
+                    <button id="T" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_Y_yellow.jpg" class="product-thumb" alt="">
+                    <button id="Y" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_U_yellow.jpg" class="product-thumb" alt="">
+                    <button id="U" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_I_yellow.jpg" class="product-thumb" alt="">
+                    <button id="I" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_O_yellow.jpg" class="product-thumb" alt="">
+                    <button id="O" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_P_yellow.jpg" class="product-thumb" alt="">
+                    <button id="P" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_A_yellow.jpg" class="product-thumb" alt="">
+                    <button id="A" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_S_yellow.jpg" class="product-thumb" alt="">
+                    <button id="S" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container-2">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_D_yellow.jpg" class="product-thumb" alt="">
+                    <button id="D" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_F_yellow.jpg" class="product-thumb" alt="">
+                    <button id="F" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_G_yellow.jpg" class="product-thumb" alt="">
+                    <button id="G" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_H_yellow.jpg" class="product-thumb" alt="">
+                    <button id="H" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_J_yellow.jpg" class="product-thumb" alt="">
+                    <button id="J" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_K_yellow.jpg" class="product-thumb" alt="">
+                    <button id="K" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_Z_yellow.jpg" class="product-thumb" alt="">
+                    <button id="Z" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_X_yellow.jpg" class="product-thumb" alt="">
+                    <button id="X" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_C_yellow.jpg" class="product-thumb" alt="">
+                    <button id="C" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_V_yellow.jpg" class="product-thumb" alt="">
+                    <button id="V" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_B_yellow.jpg" class="product-thumb" alt="">
+                    <button id="B" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tetronimo_yellow/Tetronimo_M_yellow.jpg" class="product-thumb" alt="">
+                    <button id="M" class="card-btn">Choose Piece</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>        
+   
+
+
+
+
     <script src="tetrominoes.js"></script>
-    <script src="Tetris10.js"></script>
-    <script src="script.js"></script>
+    <script src="Tetris20.js"></script>
+    <script src="Tetris20e.js"></script>
 </body>
 </html>

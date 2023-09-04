@@ -17,6 +17,6 @@ productContainers.forEach((item, i, cardBtn) => {
 
     cardBtn[i].addEventListener('click', (event) => {
         //const qoute = document.getElementById("card");
-        //console.log(event.target.innerHTML);
+        console.log(event.target.innerHTML);
     })
 })
