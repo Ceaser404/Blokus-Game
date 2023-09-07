@@ -36,3 +36,11 @@ but that was removed as the arrow keys would move the scrollbar when the user wa
 ![BlokusRun4](https://github.com/Ceaser404/Blokus-Game/assets/119560473/0a7891e0-cc5e-4b4b-9208-ca612270d276)
 <h3>Blue wins with the lowest remaining tiles!</h3>
 
+<h4>The game is missing useful features such as an undo button, flipping pieces, and the pieces images do not yet switch properly based on remaining players to name a few issues.
+  However, this game was useful in learing to use Javascript DOM tools such as .getElementById(), .innerHTML, .querySelector(), and .addEventListener(). </h4>
+
+
+
+
+
+
