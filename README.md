@@ -11,11 +11,13 @@ but that was removed as the arrow keys would move the scrollbar when the user wa
 <h3>4. Place piece with Shift key</h3>
 <h3>5. Repeat for next player</h3>
 
-![BlokusRun1](https://github.com/Ceaser404/Blokus-Game/assets/119560473/45aeab56-8ec6-44d8-8031-90a7cd2b5d23.jpg)
+![BlokusRun1](/repository/ReadmeImages/BlokusRun.jpg?raw=true "First Blokus")
 
+![BlokusRun1](/repository/ReadmeImages/BlokusRun2.jpg?raw=true "First Blokus")
 
+![BlokusRun1](/repository/ReadmeImages/BlokusRun3.jpg?raw=true "First Blokus")
 
-
+![BlokusRun1](/repository/ReadmeImages/BlokusRun4.jpg?raw=true "First Blokus")
 
 
 ![BlokusRun2](https://github.com/Ceaser404/Blokus-Game/assets/119560473/69270cad-1fbf-46ae-80cb-fd63b2bdf183.jpg)
