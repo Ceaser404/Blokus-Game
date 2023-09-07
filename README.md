@@ -11,7 +11,7 @@ but that was removed as the arrow keys would move the scrollbar when the user wa
 <h3>4. Place piece with Shift key</h3>
 <h3>5. Repeat for next player</h3>
 
-![BlokusRun1](/ReadmeImages/BlokusRun.jpg?raw=true "First Blokus")
+![BlokusRun1](/ReadmeImages/BlokusRun1.jpg?raw=true "First Blokus")
 
 ![BlokusRun1](/ReadmeImages/BlokusRun2.jpg?raw=true "First Blokus")
 
