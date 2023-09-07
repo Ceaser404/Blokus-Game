@@ -11,31 +11,15 @@ but that was removed as the arrow keys would move the scrollbar when the user wa
 <h3>4. Place piece with Shift key</h3>
 <h3>5. Repeat for next player</h3>
 
-![BlokusRun1](/repository/ReadmeImages/BlokusRun.jpg?raw=true "First Blokus")
+![BlokusRun1](/ReadmeImages/BlokusRun.jpg?raw=true "First Blokus")
 
-![BlokusRun1](/repository/ReadmeImages/BlokusRun2.jpg?raw=true "First Blokus")
+![BlokusRun1](/ReadmeImages/BlokusRun2.jpg?raw=true "First Blokus")
 
-![BlokusRun1](/repository/ReadmeImages/BlokusRun3.jpg?raw=true "First Blokus")
+![BlokusRun1](/ReadmeImages/BlokusRun3.jpg?raw=true "First Blokus")
 
-![BlokusRun1](/repository/ReadmeImages/BlokusRun4.jpg?raw=true "First Blokus")
-
-
-![BlokusRun2](https://github.com/Ceaser404/Blokus-Game/assets/119560473/69270cad-1fbf-46ae-80cb-fd63b2bdf183.jpg)
+![BlokusRun1](/ReadmeImages/BlokusRun4.jpg?raw=true "First Blokus")
 
 
-
-
-
-
-
-![BlokusRun3](https://github.com/Ceaser404/Blokus-Game/assets/119560473/3bbd9e50-fafd-4cd5-8687-8e1af1704d41.jpg)
-
-
-
-
-
-
-![BlokusRun4](https://github.com/Ceaser404/Blokus-Game/assets/119560473/0a7891e0-cc5e-4b4b-9208-ca612270d276.jpg)
 <h3>Blue wins with the lowest remaining tiles!</h3>
 
 <h4>The game is missing useful features such as an undo button, flipping pieces, and the pieces images do not yet switch properly based on remaining players to name a few issues.
