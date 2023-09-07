@@ -22,7 +22,7 @@ but that was removed as the arrow keys would move the scrollbar when the user wa
 
 <h3>Blue wins with the lowest remaining tiles!</h3>
 
-<h4>The game is missing useful features such as an undo button, flipping pieces, and the pieces images do not yet switch properly based on remaining players to name a few issues.
+<h4>The game is missing useful features such as an undo button, flipping pieces, and the pieces images do not yet switch colors properly when players are removed to name a few issues.
   However, this game was useful in learning to use Javascript DOM tools such as .getElementById(), .innerHTML, .querySelector(), and .addEventListener(). </h4>
 
 
